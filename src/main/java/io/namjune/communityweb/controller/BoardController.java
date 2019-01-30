@@ -25,7 +25,7 @@ public class BoardController {
 
     @GetMapping("/list")
     public String list(@PageableDefault Pageable pageable, Model model) {
-        model.addAttribute("boardList", boardService.findBoardList(pageable));
+        model.addAttribute("boardList", boardService.findBoardList(pageable).getContent());
         return "/board/list";
     }
 

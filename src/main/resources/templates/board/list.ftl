@@ -32,12 +32,11 @@
             <tbody>
             <#list boardList as board>
                 <tr>
-                    <td>${board.idx}</td>
+                    <td>${board.id}</td>
                     <td>${board.boardType.value}</td>
-                    <td><a href="/board?idx=${board.idx}">${board.title}</a></td>
-                    <td>${temporals.format(board.createdDate, 'yyyy-MM-dd HH:mm')}</td>
-                    <td>${temporals.format(board.updatedDate, 'yyyy-MM-dd HH:mm')}</td>
-
+                    <td><a href="/board?idx=${board.id}">${board.title}</a></td>
+                    <td>${board.createdDate}</td>
+                    <td>${board.updatedDate}</td>
                 </tr>
             </#list>
             </tbody>
