@@ -33,9 +33,9 @@ public class CustomRunner implements CommandLineRunner, WebMvcConfigurer {
     @Override
     public void run(String... args) throws Exception {
         User user = userRepository.save(User.builder()
-                .name("havi")
-                .password("test")
-                .email("havi@gmail.com")
+                .name("NJ")
+                .password("1234")
+                .email("namjunemy@gmail.com")
                 .createdDate(LocalDateTime.now())
                 .build());
 
