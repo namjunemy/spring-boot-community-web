@@ -11,7 +11,7 @@ public class LoginController {
         return "login";
     }
 
-    @GetMapping(value = "/loginSuccess")
+    @GetMapping("/loginSuccess")
     public String loginComplete() {
         return "redirect:/board/list";
     }
