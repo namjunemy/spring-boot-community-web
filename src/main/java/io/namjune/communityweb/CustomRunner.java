@@ -5,30 +5,20 @@ import io.namjune.communityweb.domain.User;
 import io.namjune.communityweb.domain.enums.BoardType;
 import io.namjune.communityweb.repository.BoardRepository;
 import io.namjune.communityweb.repository.UserRepository;
-import io.namjune.communityweb.resolver.UserArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.springframework.web.method.support.HandlerMethodArgumentResolver;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.stream.IntStream;
 
 
 @RequiredArgsConstructor
 @Component
-public class CustomRunner implements CommandLineRunner, WebMvcConfigurer {
+public class CustomRunner implements CommandLineRunner {
 
     private final UserRepository userRepository;
     private final BoardRepository boardRepository;
-    private final UserArgumentResolver userArgumentResolver;
-
-    @Override
-    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-        argumentResolvers.add(userArgumentResolver);
-    }
 
     @Override
     public void run(String... args) throws Exception {
