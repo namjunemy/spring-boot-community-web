@@ -78,6 +78,9 @@
             type: "POST",
             data: jsonData,
             contentType: "application/json",
+	        headers: {
+                "Authorization": "Basic " + btoa("nj" +":" + "1234")
+	        },
             dataType: "json",
             success: function () {
                 alert('저장 성공!');
@@ -103,6 +106,9 @@
             type: "PUT",
             data: jsonData,
             contentType: "application/json",
+            headers: {
+                "Authorization": "Basic " + btoa("nj" +":" + "1234")
+            },
             dataType: "json",
             success: function () {
                 alert('수정 성공!');
